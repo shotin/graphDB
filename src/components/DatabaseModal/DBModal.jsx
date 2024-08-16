@@ -5,11 +5,11 @@ import "../../assets/css/modal.css";
 
 const DBModal = ({ handleClose }) => {
   const [databaseType, setDatabaseType] = useState("Blazegraph");
-  const [namespace, setNamespace] = useState(""); // New state variable for namespace
+  const [namespace, setNamespace] = useState("");
   const [port, setPort] = useState("9999");
   const [minMemory, setMinMemory] = useState("");
   const [maxMemory, setMaxMemory] = useState("");
-  const [installationPath, setInstallationPath] = useState(""); // State for installation path
+  const [installationPath, setInstallationPath] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -37,7 +37,7 @@ const DBModal = ({ handleClose }) => {
       port,
       minMemory,
       maxMemory,
-      installationPath, // Include installation path in data
+      installationPath,
     };
 
     try {
@@ -63,7 +63,6 @@ const DBModal = ({ handleClose }) => {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      // Extract the folder path (may vary by browser)
       setInstallationPath(file.webkitRelativePath || file.path || file.name);
     }
   };

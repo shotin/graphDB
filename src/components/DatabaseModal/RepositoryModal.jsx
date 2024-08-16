@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import { HTTP } from "../../utils"; // Make sure this is configured to point to your backend
+import { HTTP } from "../../utils";
+// import PropTypes from "prop-types";
+// RepositoryModal.propTypes = {
+//   handleCloseRepository: PropTypes.func.isRequired,
+// };
 
 const RepositoryModal = ({ handleCloseRepository }) => {
   const [databaseType, setDatabaseType] = useState("Blazegraph");
-  const [ipAddress, setIpAddress] = useState(""); // IP address state
+  const [ipAddress, setIpAddress] = useState("");
   const [port, setPort] = useState("");
 
   const handleSubmit = async (event) => {

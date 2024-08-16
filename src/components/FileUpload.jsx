@@ -17,7 +17,6 @@ const FileUpload = () => {
   const [dropdownOpen, setDropdownOpen] = useState(-1);
   const [error, setError] = useState("");
 
-  // Fetch files from the server
   const fetchFiles = async () => {
     try {
       const response = await HTTP.get("/files", {
