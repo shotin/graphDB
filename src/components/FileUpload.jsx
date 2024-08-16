@@ -64,7 +64,7 @@ const FileUpload = () => {
     const fileExtension = file.name.split(".").pop().toLowerCase();
 
     if (allowedExtensions.includes(fileExtension)) {
-      const fileSize = file.size; // File size in bytes
+      const fileSize = file.size;
 
       const formData = new FormData();
       formData.append("file", file);

@@ -6,17 +6,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         {routes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            element={
-              // route.protected ? (
-              //   <PrivateRoute>{route.element}</PrivateRoute>
-              // ) : (
-              route.element
-              // )
-            }
-          />
+          <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
     </BrowserRouter>
